@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="15dp"
+        android:id="@+id/searchview"
+        app:strokeWidth="2dp"
+        app:strokeColor="#000000"
+        android:layout_margin="10dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:id="@+id/etsearch"
+            android:drawableLeft="@drawable/search_icon"
+            android:gravity="center"
+            android:hint="Search"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movieslist"
+         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:id="@+id/norcord"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/noHospital1"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:src="@drawable/norecordfound"
+            android:layout_gravity="center_vertical"
+            android:text="No Hospital Center in your Area"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/soory"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/noHospital1"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Sorry!"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/norecord"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/soory"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:text="NO Record Found!"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rretry"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/norecord"
+            android:textAllCaps="true"
+            android:textSize="20dp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="20dp"
+            android:text="Retry!"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>
